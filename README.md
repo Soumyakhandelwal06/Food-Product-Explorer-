@@ -58,6 +58,14 @@ npm run dev
 
 Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Method Used to Solve the Problem
+
+1. **Architecture & State**: Used React 18 with Vite for a fast development experience. Global state (search queries, filters, products, and pagination) is managed using the native React Context API (`AppContext.jsx` and `CartContext.jsx`) to avoid prop-drilling and the overhead of Redux for this scale.
+2. **Data Fetching**: Used Axios to interact with the OpenFoodFacts API. All API calls are abstracted into a dedicated service file (`api/openFoodFacts.js`) to decouple the UI from data-fetching logic and to allow easy substitution or mocking.
+3. **Routing**: Implemented client-side routing with React Router v6 to handle navigation between the main listing page and the product detailed view seamlessly.
+4. **Styling & UI**: Implemented a modern dark glassmorphism design system using Vanilla CSS. CSS variables (`index.css`) were used extensively for consistent theming and responsive design using Flexbox and CSS Grid without external heavy UI libraries.
+5. **Bonus / Interactivity**: Designed a Cart Drawer that slides in and out, managed globally, to satisfy the add-to-cart bonus feature requirement. The app is fully responsive across mobile, tablet, and desktop viewports.
+
 ## API Endpoints Used
 
 | Feature | Endpoint |
