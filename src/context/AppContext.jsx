@@ -14,6 +14,10 @@ export const useApp = () => {
   return ctx
 }
 
+/**
+ * AppProvider component provides a global context for the application.
+ * Manages search queries, filters, sorting, products listing, and pagination state.
+ */
 export function AppProvider({ children }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [barcodeQuery, setBarcodeQuery] = useState('')
