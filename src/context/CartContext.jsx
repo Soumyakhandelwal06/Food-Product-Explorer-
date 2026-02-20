@@ -8,6 +8,10 @@ export const useCart = () => {
   return ctx
 }
 
+/**
+ * CartProvider component manages the shopping cart state.
+ * Handles adding, removing, and updating item quantities, as well as the cart drawer visibility.
+ */
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
